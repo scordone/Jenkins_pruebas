@@ -3,8 +3,12 @@ pipeline {
   stages {
     stage('Print test') {
       steps {
-        sh 'ls -la'
+        sh '''stage(\'sh how to\') {
+        steps {
+            sh \'ls -l\'
+        }
+    }'''
+        }
       }
     }
   }
-}
