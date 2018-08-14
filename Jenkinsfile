@@ -1,13 +1,35 @@
 pipeline {
-  agent any
+  agent none
   stages {
     stage('Check if File Exists') {
+      environment {
+        existe = ''
+      }
       steps {
-        waitUntil() {
-          fileExists '\\\\g100603sv078\\Interfaces_STD_Firstdata\\XCOM\\PL122D.*'
+        fileExists '\\\\g100603sv078\\Interfaces_STD_Firstdata\\XCOM\\PL122D.*'
+        script {
+          pipeline {
+            agent any
+
+            environment {
+              DISABLE_AUTH = 'true'
+              DB_ENGINE    = 'sqlite'
+            }
+
+            stages {
+              stage('Build') {
+                steps {
+                  sh 'printenv'
+                }
+              }
+            }
+          }
         }
 
       }
     }
+  }
+  environment {
+    existe = 'NO'
   }
 }
