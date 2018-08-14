@@ -14,16 +14,16 @@ prueba="a"
 file="\\\\\\\\g100603sv078\\\\Interfaces_STD_Firstdata\\\\XCOM\\\\PL122D.$dia.192"
 if [ -f "$file" ]
 then
-        $prueba=ENCONTRE
+        prueba=ENCONTRE
 	echo "$file found."
 else
-        $prueba="NO LO ENCONTRE"
+        prueba="NO LO ENCONTRE"
 	echo "$file not found."
 fi
 '''
       }
     }
-    stage('') {
+    stage('error') {
       steps {
         sh 'echo "${prueba}"'
       }
