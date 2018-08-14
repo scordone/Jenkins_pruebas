@@ -13,13 +13,13 @@ dia="20180711"
 file="\\\\\\\\g100603sv078\\\\Interfaces_STD_Firstdata\\\\XCOM\\\\PL122D.$dia.192"
 if [ -f "$file" ]
 then
-        ${test}="ENCONTRE"
+        ${env.test}="ENCONTRE"
 	echo "$file found."
 else
-        ${test}="NO LO ENCONTRE"
+        ${env.test}="NO LO ENCONTRE"
 	echo "$file not found."
 fi
-echo "${test}"'''
+echo "${env.test}"'''
       }
     }
   }
