@@ -15,7 +15,7 @@ file="\\\\\\\\g100603sv078\\\\Interfaces_STD_Firstdata\\\\XCOM\\\\PL122D.$dia.19
 if [ -f "$file" ]
 then
         prueba="ENCONTRE"
-        ${env.test}="ENCONTRE"
+        set test="ENCONTRE"
 	echo "$file found."
 else
         prueba="NO LO ENCONTRE"
@@ -26,8 +26,7 @@ echo "${test}"'''
     }
     stage('FIN') {
       steps {
-        sh '''echo "$file"
-echo "${test}"'''
+        sh 'echo "${test}"'
       }
     }
   }
