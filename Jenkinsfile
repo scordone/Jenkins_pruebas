@@ -10,16 +10,22 @@ pipeline {
         sh '''set echo off
 dia="$(date +%Y%m%d)"
 dia="20180711"
+prueba="a"
 file="\\\\\\\\g100603sv078\\\\Interfaces_STD_Firstdata\\\\XCOM\\\\PL122D.$dia.192"
 if [ -f "$file" ]
 then
-        ${test}=ENCONTRE
+        $prueba=ENCONTRE
 	echo "$file found."
 else
-        echo "NO LO ENCONTRE" > ${test}
+        $prueba="NO LO ENCONTRE"
 	echo "$file not found."
 fi
-echo "${test}"'''
+'''
+      }
+    }
+    stage('') {
+      steps {
+        sh 'echo "${prueba}"'
       }
     }
   }
