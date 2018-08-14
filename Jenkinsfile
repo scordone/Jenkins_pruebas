@@ -15,7 +15,8 @@ file="\\\\\\\\g100603sv078\\\\Interfaces_STD_Firstdata\\\\XCOM\\\\PL122D.$dia.19
 if [ -f "$file" ]
 then
         prueba="ENCONTRE"
-        set ${test}="ENCONTRE"
+        test="ENCONTRE"
+        set test
 	echo "$file found."
 else
         prueba="NO LO ENCONTRE"
