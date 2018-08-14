@@ -7,7 +7,7 @@ pipeline {
       }
       steps {
         fileExists '\\\\g100603sv078\\Interfaces_STD_Firstdata\\XCOM\\PL122D.*'
-        sh '''file="\\\\\\\\g100603sv078\\\\Interfaces_STD_Firstdata\\\\XCOM\\\\PL122D.20180711.*"
+        sh '''file="\\\\\\\\g100603sv078\\\\Interfaces_STD_Firstdata\\\\XCOM\\\\PL122D.20180711.192"
 if [ -f "$file" ]
 then
 	echo "$file found."
