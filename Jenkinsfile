@@ -7,7 +7,14 @@ pipeline {
       }
       steps {
         fileExists '\\\\g100603sv078\\Interfaces_STD_Firstdata\\XCOM\\PL122D.*'
-        sh 'echo "${test}"'
+        sh '''file="\\\\g100603sv078\\Interfaces_STD_Firstdata\\XCOM\\PL122D.*"
+if [ -f "$file" ]
+then
+	echo "$file found."
+else
+	echo "$file not found."
+fi
+echo "${test}"'''
       }
     }
   }
