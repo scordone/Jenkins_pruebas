@@ -8,7 +8,7 @@ pipeline {
       steps {
         fileExists '\\\\g100603sv078\\Interfaces_STD_Firstdata\\XCOM\\PL122D.*'
         sh '''dia = date +\'%Y%m%d\'
-file = "\\\\\\\\g100603sv078\\\\Interfaces_STD_Firstdata\\\\XCOM\\\\PL122D.$dia.192"
+file = "\\\\\\\\g100603sv078\\\\Interfaces_STD_Firstdata\\\\XCOM\\\\PL122D.%dia.192"
 if [ -f "$file" ]
 then
 	echo "$file found."
