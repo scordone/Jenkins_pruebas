@@ -3,12 +3,8 @@ pipeline {
   stages {
     stage('Print test') {
       steps {
-        sh '''stage(\'sh how to\') {
-        steps {
-            sh \'ls -l\'
-        }
-    }'''
-        }
+        fileExists '\\\\g100603sv078\\Interfaces_STD_Firstdata\\XCOM\\PL122D.*'
       }
     }
   }
+}
