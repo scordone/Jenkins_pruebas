@@ -11,7 +11,7 @@ pipeline {
     }
     stage('') {
       steps {
-        echo 'existe'
+        echo '${existe}'
       }
     }
   }
