@@ -1,5 +1,10 @@
 pipeline {
-  agent none
+  agent {
+    node {
+      label 'node'
+    }
+
+  }
   stages {
     stage('Check if File Exists') {
       environment {
