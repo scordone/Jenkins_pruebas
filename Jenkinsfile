@@ -14,8 +14,8 @@ prueba="a"
 file="\\\\\\\\g100603sv078\\\\Interfaces_STD_Firstdata\\\\XCOM\\\\PL122D.$dia.192"
 if [ -f "$file" ]
 then
-        prueba=ENCONTRE
-        env.test="ENCONTRE"
+        prueba="ENCONTRE"
+        $test="ENCONTRE"
 	echo "$file found."
 else
         prueba="NO LO ENCONTRE"
