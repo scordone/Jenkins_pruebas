@@ -27,7 +27,7 @@ echo "${test}"'''
     stage('error') {
       steps {
         sh '''echo "$file"
-echo "$prueba"'''
+echo "${test}"'''
       }
     }
   }
