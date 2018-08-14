@@ -33,7 +33,4 @@ pipeline {
       }
     }
   }
-  environment {
-    existe = 'NO'
-  }
 }
