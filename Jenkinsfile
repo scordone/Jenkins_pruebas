@@ -25,7 +25,8 @@ fi
     }
     stage('error') {
       steps {
-        sh 'echo "${prueba}"'
+        sh '''echo "$file"
+echo "$prueba"'''
       }
     }
   }
